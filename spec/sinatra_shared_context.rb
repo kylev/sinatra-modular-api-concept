@@ -4,7 +4,7 @@ require 'json'
 RSpec.shared_context 'sinatra app' do
   let(:app) { subject } # Rack::Test needs app to resolve
   let(:json_response) do
-    JSON.parse(last_response.body)
+    JSON.load(last_response.body)
   end
 
   def post_json(uri, params = {}, env = {}, &block)
