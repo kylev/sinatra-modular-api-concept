@@ -1,5 +1,7 @@
 # Modular Sinatra Concept
 
+[![Build Status](https://travis-ci.org/kylev/sinatra-modular-api-concept.svg)](https://travis-ci.org/kylev/sinatra-modular-api-concept)
+
 This is a public version of an experiment and should not be considered
 advice or a system to base your own off of. YMMV.
 
