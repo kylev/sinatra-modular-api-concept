@@ -1,6 +1,7 @@
 require 'franky/base'
 
 module Franky
+  # Franky dances.
   class Dance < Franky::Base
     get '/dance' do
       json(step: 'Waltz')

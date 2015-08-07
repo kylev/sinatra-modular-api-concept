@@ -5,7 +5,14 @@ rescue LoadError
   true
 end
 
+begin
+  require 'rubocop/rake_task'
+  RuboCop::RakeTask.new
+rescue LoadError
+  true
+end
+
 desc 'Run the full test suite.'
-task test: [:spec]
+task test: [:spec, :rubocop]
 
 task default: :test

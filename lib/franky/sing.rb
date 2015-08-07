@@ -3,6 +3,7 @@ require 'json'
 require 'franky/base'
 
 module Franky
+  # Franky sings.
   class Sing < Franky::Base
     get '/sing' do
       json(foo: :bar)
@@ -10,9 +11,7 @@ module Franky
 
     post '/sing' do
       body = JSON.load(request.body)
-      unless body.key?('tune')
-        halt_json(result: :error, message: 'No tune.')
-      end
+      halt_json(result: :error, message: 'No tune.') unless body.key?('tune')
 
       json(result: :success, message: "Gonna sing #{body['tune']}")
     end

@@ -15,7 +15,7 @@ describe Franky::Sing do
     context 'with invalid input' do
       before { post_json('/sing', {}) }
       it { expect(last_response).to be_ok }
-      it { expect(json_response['result']).to eq('error')}
+      it { expect(json_response['result']).to eq('error') }
     end
 
     context 'with valid input' do

@@ -8,6 +8,6 @@ module Franky
     def halt_json(json)
       content_type :json
       halt(JSON.dump(json))
-     end
+    end
   end
 end

@@ -1,7 +1,9 @@
 require 'sinatra/base'
 require 'sinatra/json'
 
+# A modular Sinatra concept.
 module Franky
+  # Entry class and root-URL handler.
   class Root < Sinatra::Base
     get '/' do
       json(status: :success, message: 'Nothing to see here.')
